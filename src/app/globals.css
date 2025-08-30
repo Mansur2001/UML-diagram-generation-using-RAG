@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(156, 39, 176, 0.5);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(156, 39, 176, 0.8);
+}
+
+/* Chat container scrollbar */
+.chat-container {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(181, 90, 230, 0.5) transparent;
+}
+
+.chat-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+  background-color: rgba(156, 39, 176, 0.5);
+  border-radius: 3px;
+}
+
+.chat-container::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(156, 39, 176, 0.7);
+}
+
+/* Dark mode scrollbar */
+.dark .chat-container {
+  scrollbar-color: rgba(159, 121, 241, 0.5) transparent;
+}
+
+.dark .chat-container::-webkit-scrollbar-thumb {
+  background-color: rgba(171, 100, 237, 0.5);
+}
+
+.dark .chat-container::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(176, 107, 241, 0.8);
+}
+
+/* Ensure html and body take full height */
+html,
+body,
+#__next {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
